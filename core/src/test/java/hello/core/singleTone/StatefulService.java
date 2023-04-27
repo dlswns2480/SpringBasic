@@ -1,15 +1,15 @@
 package hello.core.singleTone;
 
 public class StatefulService {
-    private int price;
+    //private int price;
 
-    public void order(String name, int price){
-        System.out.println("name = " + name + "price" + price);
-        this.price = price;
-    }
-    public int getPrice(){
+    public int order(String name, int price){
+        //System.out.println("name = " + name + "price" + price);
         return price;
     }
+//    public int getPrice(){
+//        return price;
+//    }
 
 
 }

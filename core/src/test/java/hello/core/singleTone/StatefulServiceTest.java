@@ -18,12 +18,13 @@ class StatefulServiceTest {
         StatefulService statefulService1 = ac.getBean("statefulService", StatefulService.class);
         StatefulService statefulService2 = ac.getBean("statefulService", StatefulService.class);
 
-        statefulService1.order("userA", 10000);
-        statefulService2.order("userB", 20000);
+        int userAprice= statefulService1.order("userA", 10000);
+        int userBprice = statefulService2.order("userB", 20000);
 
-        System.out.println("userA's price = "+ statefulService1.getPrice());
-
-        org.assertj.core.api.Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
+        //System.out.println("userA's price = "+ statefulService1.getPrice());
+        System.out.println("userAprice = " + userAprice);
+        System.out.println("userBprice = " + userBprice);
+        //org.assertj.core.api.Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
 
 
     }
