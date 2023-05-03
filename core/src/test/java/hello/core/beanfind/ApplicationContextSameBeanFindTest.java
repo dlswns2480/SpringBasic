@@ -4,6 +4,7 @@ import hello.core.AppConfig;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
@@ -51,10 +52,10 @@ public class ApplicationContextSameBeanFindTest {
         public MemberRepository memberRepository1(){
             return new MemoryMemberRepository();
         }
-//        @Bean
-//        public MemberRepository memberRepository2(){
-//            return new MemoryMemberRepository();
-//        }
+        @Bean
+        public MemberRepository memberRepository2(){
+            return new MemoryMemberRepository();
+        }
 
 
     }
